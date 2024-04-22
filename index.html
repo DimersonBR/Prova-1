@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova - Herói e Vilão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="personagem" >
+        <div class="barra-vida" :style="{width: heroi.vida + '%'}">{{ heroi.vida }}</div>
+        <div class="sprite">
+            <img src="../img/image_heroi.png"  alt="img_heroi">
+        </div>
+        <h1>Herói</h1>
+        <div class="acoes">
+            <button @click="atacar(true)">atacar</button>
+            <button @click="defender(true)">defender</button>
+            <button @click="usarPocao(true)">usarPocao</button>
+            <button @click="correr(true)">Correr</button>
+        </div>
+    </div>
+    <div class="personagem" >
+        <div class="barra-vida" :style="{width: vilao.vida + '%'}">{{ vilao.vida }}</div>
+        <div class="sprite">
+            <img src="../img/image_vilao.png"  alt="img_vilao">    
+        </div>
+        <h1>Vilão</h1>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="index.js"></script>
